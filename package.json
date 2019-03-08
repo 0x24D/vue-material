@@ -1,18 +1,17 @@
 {
   "name": "vue-material",
   "description": "Material Design for Vue.js",
-  "version": "1.0.0-beta-10.2",
+  "version": "1.0.0-dp",
   "license": "MIT",
   "author": {
-    "name": "marcosmoura",
-    "email": "marcosvmmoura@gmail.com"
+    "name": "0x24d",
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuematerial/vue-material.git"
+    "url": "git+https://github.com/0x24d/vue-material.git"
   },
   "bugs": {
-    "url": "https://github.com/vuematerial/vue-material/issues"
+    "url": "https://github.com/0x24d/vue-material/issues"
   },
   "files": [
     "dist",
