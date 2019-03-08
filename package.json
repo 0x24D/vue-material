@@ -38,7 +38,8 @@
     "node": ">= 7.0"
   },
   "peerDependencies": {
-    "vue": "^2.5.0"
+    "vue": "^2.5.0",
+    "acorn": "^6.1.1"
   },
   "dependencies": {},
   "devDependencies": {
