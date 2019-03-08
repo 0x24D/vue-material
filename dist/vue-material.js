@@ -1,5 +1,5 @@
 /*!
- * vue-material v1.0.0-beta-10.5
+ * vue-material v1.0.0-beta-10.6
  * Made with <3 by 0x24d 2019
  * Released under the MIT License.
  */
@@ -5960,8 +5960,7 @@ exports.default = {
     },
     localString: function localString() {
       return this.localDate && (0, _format2.default)(this.localDate, this.dateFormat, {
-        useAdditionalDayOfYearTokens: true,
-        useAdditionalWeekYearTokens: true
+        awareOfUnicodeTokens: true
       });
     },
     localNumber: function localNumber() {
@@ -5969,7 +5968,7 @@ exports.default = {
     },
     parsedInputDate: function parsedInputDate() {
       var parsedDate = (0, _parse2.default)(this.inputDate, this.dateFormat, new Date(), {
-        useAdditionalDayOfYearTokens: true, useAdditionalWeekYearTokens: true });
+        awareOfUnicodeTokens: true });
       return parsedDate && (0, _isValid2.default)(parsedDate) ? parsedDate : null;
     },
     pattern: function pattern() {
@@ -6027,8 +6026,7 @@ exports.default = {
     dateFormat: function dateFormat() {
       if (this.localDate) {
         this.inputDate = (0, _format2.default)(this.inputDate, this.dateFormat, {
-          useAdditionalDayOfYearTokens: true,
-          useAdditionalWeekYearTokens: true
+          awareOfUnicodeTokens: true
         });
       }
     }
@@ -6069,11 +6067,11 @@ exports.default = {
         this.localDate = this.value;
       } else if (this.isModelTypeString) {
         var parsedDate = (0, _parse2.default)(this.value, this.dateFormat, new Date(), {
-          useAdditionalDayOfYearTokens: true, useAdditionalWeekYearTokens: true });
+          awareOfUnicodeTokens: true });
 
         if ((0, _isValid2.default)(parsedDate)) {
           this.localDate = (0, _parse2.default)(this.value, this.dateFormat, new Date(), {
-            useAdditionalDayOfYearTokens: true, useAdditionalWeekYearTokens: true });
+            awareOfUnicodeTokens: true });
         } else {
           _vue2.default.util.warn('The datepicker value is not a valid date. Given value: ' + this.value + ', format: ' + this.dateFormat);
         }
