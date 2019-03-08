@@ -38,11 +38,11 @@
     "node": ">= 7.0"
   },
   "peerDependencies": {
-    "vue": "^2.5.0",
-    "acorn": "^6.1.1"
+    "vue": "^2.5.0"
   },
   "dependencies": {},
   "devDependencies": {
+    "acorn": "^6.1.1", 
     "autoprefixer": "^7.2.5",
     "avoriaz": "^6.3.0",
     "axios": "^0.17.1",
