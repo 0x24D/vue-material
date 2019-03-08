@@ -1,5 +1,5 @@
 /*!
- * vue-material v1.0.0-beta-10.3
+ * vue-material v1.0.0-beta-10.4
  * Made with <3 by 0x24d 2019
  * Released under the MIT License.
  */
@@ -5959,7 +5959,10 @@ exports.default = {
       return _typeof(this.value) === 'object' && this.value instanceof Date && (0, _isValid2.default)(this.value);
     },
     localString: function localString() {
-      return this.localDate && (0, _format2.default)(this.localDate, this.dateFormat);
+      return this.localDate && (0, _format2.default)(this.localDate, this.dateFormat, {
+        useAdditionalDayOfYearTokens: true,
+        useAdditionalWeekYearTokens: true
+      });
     },
     localNumber: function localNumber() {
       return this.localDate && Number(this.localDate);
@@ -6022,7 +6025,10 @@ exports.default = {
     },
     dateFormat: function dateFormat() {
       if (this.localDate) {
-        this.inputDate = (0, _format2.default)(this.inputDate, this.dateFormat);
+        this.inputDate = (0, _format2.default)(this.inputDate, this.dateFormat, {
+          useAdditionalDayOfYearTokens: true,
+          useAdditionalWeekYearTokens: true
+        });
       }
     }
   },
