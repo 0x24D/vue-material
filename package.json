@@ -42,7 +42,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "acorn": "^6.1.1", 
+    "acorn": "^6.1.1",
     "autoprefixer": "^7.2.5",
     "avoriaz": "^6.3.0",
     "axios": "^0.17.1",
