@@ -110,7 +110,14 @@
         return typeof this.value === 'object' && this.value instanceof Date && isValid(this.value)
       },
       localString () {
-        return this.localDate && format(this.localDate, this.dateFormat)
+        return this.localDate && format(
+          this.localDate,
+          this.dateFormat,
+          {
+            useAdditionalDayOfYearTokens: true,
+            useAdditionalWeekYearTokens: true
+          }
+        )
       },
       localNumber () {
         return this.localDate && Number(this.localDate)
@@ -172,7 +179,14 @@
       },
       dateFormat () {
         if (this.localDate) {
-          this.inputDate = format(this.inputDate, this.dateFormat)
+          this.inputDate = format(
+            this.inputDate,
+            this.dateFormat,
+            {
+              useAdditionalDayOfYearTokens: true,
+              useAdditionalWeekYearTokens: true
+            }
+          )
         }
       }
     },
